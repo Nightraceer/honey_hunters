@@ -1,0 +1,17 @@
+@mixin sticky-footer($footer-height, $wrapper-selector: unquote("#wrapper"), $push-selector: unquote("#push"), $footer-selector: unquote("#footer")) {
+  html, body {
+    height: 100%;
+  }
+  #{$wrapper-selector} {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -$footer-height;
+  }
+  #{$push-selector} {
+    height: $footer-height;
+  }
+  #{$footer-selector} {
+    height: $footer-height;
+  }
+}

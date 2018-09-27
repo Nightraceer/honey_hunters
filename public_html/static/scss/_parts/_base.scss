@@ -1,0 +1,15 @@
+body {
+  font-family: $font;
+  font-size: $font-size;
+  line-height: 1;
+
+  a {
+    text-decoration: none;
+    outline: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}

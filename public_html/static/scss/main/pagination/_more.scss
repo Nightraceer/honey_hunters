@@ -1,0 +1,21 @@
+.pagination-block-more {
+  .pagination {
+    justify-content: center;
+
+    a {
+      display: inline-block;
+      padding: 15px 25px;
+      border: 2px solid $dark-color;
+      color: $dark-color;
+      font-size: 25px;
+      transition: all 0.4s;
+
+      &:hover {
+        color: #ffffff;
+        background: $dark-color;
+      }
+    }
+  }
+}
+
+

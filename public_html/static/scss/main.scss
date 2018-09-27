@@ -1,0 +1,15 @@
+@import "bootstrap";
+
+@import "settings";
+
+@import "_parts/mixins";
+
+@import "_parts/base";
+@import "_parts/header";
+@import "_parts/footer";
+@import "_parts/pagination";
+@import "_parts/forms";
+@import "_parts/modal";
+
+@import "main/index/index";
+@import "main/pagination/more";

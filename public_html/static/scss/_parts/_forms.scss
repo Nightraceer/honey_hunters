@@ -1,0 +1,166 @@
+input[type=text], input[type=password], textarea {
+  box-shadow: none;
+  padding: 8px 12px;
+  border-radius: $border-radius;
+  border: 1px solid #4c4f53;
+  width: 100%;
+  outline: none;
+  background: #2e3237;
+  font-size: 30px;
+  color: #d7d7d7;
+
+  &.invalid {
+    border-color: $red-color;
+  }
+}
+
+textarea {
+  height: 340px;
+
+  @include media-breakpoint-down(sm) {
+    height: 180px;
+  }
+}
+
+input[type=text], input[type=password] {
+  height: 103px;
+  padding: 14px 28px;
+
+  @include media-breakpoint-down(sm) {
+    height: 60px;
+  }
+
+}
+
+.required {
+  font-size: 43px;
+  color: $red-color;
+  font-weight: 500;
+}
+
+label {
+  font-size: 35px;
+  color: #d7d7d7;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 28px;
+  }
+}
+
+input[type=checkbox] {
+  display: none;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      width: 17px;
+      height: 17px;
+      content: '';
+      display: inline-block;
+      margin-right: 4px;
+      vertical-align: sub;
+    }
+  }
+
+  &:checked + label {
+    &:before {
+      content: '';
+      color: #ffffff;
+    }
+  }
+}
+
+form {
+  position: relative;
+
+  button {
+    border: none;
+    box-shadow: none;
+    border-radius: $border-radius;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #000000;
+    height: 90px;
+    font-size: 36px;
+    font-weight: 700;
+    padding: 0 35px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.red {
+      color: #ffffff;
+      background: $red-color;
+      width: auto;
+      transition: all 0.4s;
+
+      &:hover {
+        background: #BE1B24;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 70px;
+      font-size: 28px;
+    }
+  }
+
+  &.success {
+    .wrapper-success {
+      opacity: 1;
+     // transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+
+  .form-field {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 70px;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.wrapper-success {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  right: -2px;
+  left: -2px;
+  background: $dark-color;
+  pointer-events: none;
+  opacity: 0;
+  //transform: translateY(20px);
+  transition: all 0.5s;
+  padding: 40px;
+
+  .text {
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+ul.errors {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+
+  li {
+    color: $red-color;
+    padding: 3px 0;
+    margin: 0;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,194 @@
+.wrapper-index-page {
+
+  .wrapper-top-block {
+    background: $dark-color;
+    padding-bottom: 100px;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 50px;
+    }
+
+    .image {
+      text-align: center;
+      margin-bottom: 34px;
+
+      img {
+        max-height: 280px;
+
+        @include media-breakpoint-down(sm) {
+          max-width: 200px;
+        }
+      }
+    }
+
+    form {
+      .holder-button {
+        padding-top: 100px;
+        text-align: right;
+
+        @include media-breakpoint-down(sm) {
+          padding-top: 50px;
+        }
+      }
+
+      .form-field-email {
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 30px;
+        }
+      }
+
+      ul.errors {
+        position: absolute;
+      }
+    }
+  }
+
+  .wrapper-comments {
+    padding: 140px 17px 73px;
+
+    @include media-breakpoint-only(xs) {
+      padding: 40px 0 30px;
+    }
+
+    .title {
+      font-size: 43px;
+      color: #37414e;
+      font-weight: 500;
+      margin-bottom: 126px;
+      text-align: center;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 36px;
+      }
+      @include media-breakpoint-only(xs) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .comments {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+
+      .holder-comment {
+        flex: 0 0 33.33%;
+        padding: 0 33px;
+        margin-bottom: 66px;
+
+        @include media-breakpoint-down(lg) {
+          flex: 0 0 50%;
+        }
+        @include media-breakpoint-down(md) {
+          padding: 0 20px;
+          margin-bottom: 40px;
+        }
+        @include media-breakpoint-only(xs) {
+          flex: 0 0 100%;
+          margin-bottom: 30px;
+          padding: 0;
+        }
+
+        &:nth-child(2n) {
+          .comment {
+            background: $light-green-color;
+
+            .header {
+
+              background: $green-color;
+            }
+
+            .body {
+              .email {
+                color: $green-color;
+              }
+              .text {
+                color: #768275;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        .comment {
+          min-height: 406px;
+          height: 100%;
+          background: $grey-color;
+
+          @include media-breakpoint-down(md) {
+            min-height: 380px;
+          }
+          @include media-breakpoint-down(sm) {
+            min-height: 320px;
+          }
+
+          .header {
+            background: #4b596c;
+            height: 84px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            font-weight: 500;
+            color: #ffffff;
+            padding: 0 20px;
+            text-align: center;
+
+            @include media-breakpoint-down(lg) {
+              font-size: 28px;
+            }
+            @include media-breakpoint-only(sm) {
+              font-size: 20px;
+              height: 60px;
+            }
+          }
+
+          .body {
+            padding: 45px 20px;
+            text-align: center;
+
+            @include media-breakpoint-down(md) {
+              padding: 30px 20px;
+            }
+            @include media-breakpoint-only(sm) {
+              padding: 20px 15px;
+            }
+
+            .email {
+              font-size: 34px;
+              font-weight: 700;
+              color: #6d737b;
+              display: inline-block;
+              width: 100%;
+              margin-bottom: 50px;
+
+              @include media-breakpoint-down(lg) {
+                font-size: 28px;
+              }
+              @include media-breakpoint-down(md) {
+                margin-bottom: 30px;
+              }
+              @include media-breakpoint-only(sm) {
+                font-size: 20px;
+                margin-bottom: 20px;
+              }
+            }
+
+            .text {
+              font-weight: 500;
+              font-size: 30px;
+              color: #767582;
+
+              @include media-breakpoint-down(lg) {
+                font-size: 24px;
+              }
+
+              @include media-breakpoint-only(sm) {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
