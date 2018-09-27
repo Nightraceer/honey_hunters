@@ -20,6 +20,11 @@ class MainModule extends Module
                 'route' => '/',
                 'target' => [\Modules\Main\Controllers\MainController::class, 'index'],
                 'name' => 'index'
+            ],
+            [
+                'route' => '/create_table_comment',
+                'target' => [\Modules\Main\Controllers\MainController::class, 'createTableComment'],
+                'name' => 'create_table'
             ]
         ];
     }

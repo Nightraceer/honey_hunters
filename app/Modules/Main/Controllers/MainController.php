@@ -35,4 +35,15 @@ class MainController extends Controller
             'pager' => $pager
         ]);
     }
+
+    public function createTableCommentAction()
+    {
+        $created = Comment::createTable();
+
+        if ($created) {
+            echo "Таблица создана!";
+        } else {
+            echo "Не удалось создать таблицу";
+        }
+    }
 }
