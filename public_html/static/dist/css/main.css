@@ -17507,7 +17507,9 @@ body.modal-loading {
     .wrapper-index-page .wrapper-top-block form .form-field-email {
       margin-bottom: 30px; } }
   .wrapper-index-page .wrapper-top-block form ul.errors {
-    position: absolute; }
+    position: absolute;
+    bottom: -20px;
+    left: 0; }
 
 .wrapper-index-page .wrapper-comments {
   padding: 140px 17px 73px; }

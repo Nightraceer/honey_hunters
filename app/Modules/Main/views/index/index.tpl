@@ -50,16 +50,18 @@
                                     </div>
 
                                     <div class="col-xl-6">
-                                        <label for="{$formName}_text">
-                                            {$textField->label}
-                                            {if $textField->required}<span class="required">*</span>{/if}
-                                        </label>
-                                        <textarea name="{$formName}[text]" id="{$formName}_text"></textarea>
-                                        <ul class="errors" id="{$formName}_text_errors">
-                                            {if $textField->error}
-                                                <li>{$textField->error}</li>
-                                            {/if}
-                                        </ul>
+                                        <div class="form-field">
+                                            <label for="{$formName}_text">
+                                                {$textField->label}
+                                                {if $textField->required}<span class="required">*</span>{/if}
+                                            </label>
+                                            <textarea name="{$formName}[text]" id="{$formName}_text"></textarea>
+                                            <ul class="errors" id="{$formName}_text_errors">
+                                                {if $textField->error}
+                                                    <li>{$textField->error}</li>
+                                                {/if}
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
 
